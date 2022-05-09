@@ -1,4 +1,4 @@
-#tách màu
+#nén
 
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
@@ -14,7 +14,7 @@ plt.show()
 X = img.reshape((img.shape[0]*img.shape[1], img.shape[2]))
 #ctrl k c, u
 
-for K in [3]:
+for K in [2, 5]:
     kmeans = KMeans(n_clusters=K).fit(X)
     label = kmeans.predict(X)
 
@@ -27,3 +27,4 @@ for K in [3]:
     plt.imshow(img5, interpolation='nearest')
     plt.axis('off')
     plt.show()
+  
